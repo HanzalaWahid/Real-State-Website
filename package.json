@@ -3,6 +3,11 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "templateMetadata": {
+    "schemaVersion": 1,
+    "template": "tanstack_start_ts_current",
+    "revision": "tanstack_start_ts_current-78c8e5169cf8"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",

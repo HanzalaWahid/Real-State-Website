@@ -1,22 +1,10 @@
-# Pixel Perfect
+# Al Noor Property Consultants
 
-Implement exactly the screenshot and nothing else
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://screenshot-capture-tool-16.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/d04482fc-816d-4845-9e67-4bb2fc32df8a).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+A real estate website for residential, commercial, and investment properties across Doha, Lusail, and The Pearl Qatar.
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+You need Node.js and npm to run the project locally.
 
 ```sh
 git clone <this-repository-url>
