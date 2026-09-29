@@ -14,6 +14,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { QuickContactActions } from "@/components/common/QuickContactActions";
 import { Toaster } from "@/components/ui/sonner";
 import { ActionLink } from "@/components/common/Action";
 
@@ -21,9 +22,7 @@ function NotFoundComponent() {
   return (
     <div className="flex min-h-[80vh] flex-col items-center justify-center px-6 text-center">
       <p className="eyebrow">Error 404</p>
-      <h1 className="display-section mt-5 max-w-xl">
-        Looks like this property doesn't exist.
-      </h1>
+      <h1 className="display-section mt-5 max-w-xl">Looks like this property doesn't exist.</h1>
       <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
         The page you were looking for has been moved, sold, or was never listed. Our current
         instructions are all a click away.
@@ -138,6 +137,7 @@ function RootComponent() {
         </main>
         <Footer />
       </div>
+      <QuickContactActions />
       <Toaster position="bottom-right" />
     </QueryClientProvider>
   );

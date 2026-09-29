@@ -12,6 +12,7 @@ import {
   Heart,
   Phone,
   Mail,
+  MessageCircle,
 } from "lucide-react";
 
 import { Breadcrumbs } from "@/components/common/Breadcrumbs";
@@ -23,6 +24,7 @@ import { EmptyState } from "@/components/common/States";
 import { ActionLink } from "@/components/common/Action";
 import { useFavorites } from "@/hooks/useFavorites";
 import { getPropertyById, getSimilarProperties } from "@/data/repository";
+import { site } from "@/data/site";
 import {
   formatArea,
   formatDate,
@@ -231,6 +233,15 @@ function PropertyDetail() {
                     {property.agent.email}
                   </a>
                 </div>
+                <a
+                  href={`https://wa.me/${site.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(`Hello, I'm interested in ${property.title} (Ref. ${property.referenceNumber}). Could you share more details?`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 flex h-12 w-full items-center justify-center gap-2 bg-[#25D366] px-5 text-[0.75rem] uppercase tracking-[0.14em] text-[#102b1d] transition-colors hover:bg-[#1fbd5c]"
+                >
+                  <MessageCircle className="size-4" />
+                  Message on WhatsApp
+                </a>
               </div>
 
               <div className="border border-border bg-card p-7">
