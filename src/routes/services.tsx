@@ -12,16 +12,16 @@ export const Route = createFileRoute("/services")({
   loader: async () => ({ services: await getServices() }),
   head: () => ({
     meta: [
-      { title: "Brokerage, Leasing & Advisory Services | Al Noor" },
+      { title: "Real Estate Services | Rifa Real Estate WLL" },
       {
         name: "description",
         content:
-          "Sales and leasing brokerage, property marketing, management and investment advisory for owners and occupiers across Qatar.",
+          "Luxury residential and commercial sales and leasing, exclusive property marketing and representation, and bespoke real estate advisory in Qatar.",
       },
-      { property: "og:title", content: "Brokerage, Leasing & Advisory Services | Al Noor" },
+      { property: "og:title", content: "Real Estate Services | Rifa Real Estate WLL" },
       {
         property: "og:description",
-        content: "Four property disciplines under one Doha consultancy.",
+        content: "Tailored real estate services in Qatar from Rifa Real Estate WLL.",
       },
     ],
   }),

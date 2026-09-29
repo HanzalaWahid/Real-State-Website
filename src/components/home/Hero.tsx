@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { img } from "@/data/images";
+import { site } from "@/data/site";
 import { PropertySearch } from "@/components/common/PropertySearch";
 import { usePrefersReducedMotion } from "@/hooks/useMediaQuery";
 import { EASE_EDITORIAL } from "@/utils/motion";
@@ -35,7 +36,7 @@ export function Hero() {
       <div className="container-page pb-10 pt-32 md:pb-14">
         <motion.div variants={container} initial="hidden" animate="show" className="max-w-4xl">
           <motion.p variants={line} className="eyebrow text-accent">
-            Qatar Real Estate
+            {site.tagline}
           </motion.p>
           <motion.h1
             variants={line}

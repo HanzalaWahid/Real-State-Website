@@ -4,70 +4,51 @@ import { img } from "./images";
 export const services: Service[] = [
   {
     id: "s1",
-    slug: "brokerage",
+    slug: "luxury-sales-leasing",
     number: "01",
-    title: "Property Brokerage",
+    title: "Luxury Residential & Commercial Sales & Leasing",
     summary:
-      "Helping clients discover and secure properties that align with their lifestyle and investment objectives.",
+      "Residential and commercial real estate sales and leasing, tailored to each client's requirements.",
     description:
-      "Our brokerage desk covers sale and lease instructions across residential and commercial Qatar. Each consultant works a defined set of communities, so the advice you receive on pricing, service charges and negotiation position comes from live transaction data rather than portal averages.",
+      "RIFA Real Estate WLL represents luxury residential and commercial properties in Qatar, pairing clients with opportunities suited to their goals and requirements.",
     image: img.propApartment,
     points: [
-      "Buyer and tenant representation",
-      "Seller and landlord instructions",
-      "Comparative pricing analysis",
-      "Negotiation and offer management",
+      "Luxury residential property sales and leasing",
+      "Commercial property sales and leasing",
+      "Tailored support for buyers, tenants, owners and landlords",
     ],
   },
   {
     id: "s2",
-    slug: "marketing",
+    slug: "exclusive-marketing-representation",
     number: "02",
-    title: "Property Marketing",
+    title: "Exclusive Property Marketing & Representation",
     summary:
-      "Positioning homes and developments with photography, copy and media planning worthy of the asset.",
+      "Discreet, considered marketing and representation for distinctive properties.",
     description:
-      "We produce the architectural photography, floor plans, virtual walkthroughs and launch collateral that a premium instruction requires, then place it across the portals, private databases and regional media where qualified Qatar buyers actually look.",
+      "Each property is represented with care and attention to detail, with marketing shaped around its character and the aspirations of its owner.",
     image: img.projectPearl,
     points: [
-      "Architectural photography and film",
-      "Launch campaigns for new developments",
-      "Portal, social and private database placement",
-      "Buyer qualification and reporting",
+      "Exclusive property marketing",
+      "Tailored property representation",
+      "Discreet client and owner service",
     ],
   },
   {
     id: "s3",
-    slug: "management",
+    slug: "bespoke-real-estate-advisory",
     number: "03",
-    title: "Property Management",
+    title: "Bespoke Real Estate Advisory",
     summary:
-      "Protecting the value of owned assets through disciplined tenancy, maintenance and compliance handling.",
+      "Personalized real estate guidance shaped around each client's priorities.",
     description:
-      "For landlords resident in Qatar or abroad, we handle tenant selection, Ejari-equivalent documentation, rent collection, scheduled maintenance, snagging and annual condition reporting — with transparent statements every quarter.",
+      "Our advisory approach is built on trusted relationships, discretion and meticulous attention to detail, delivering real estate solutions that reflect each client's aspirations.",
     image: img.propTownhouse,
     points: [
-      "Tenant sourcing and vetting",
-      "Rent collection and arrears handling",
-      "Planned and reactive maintenance",
-      "Quarterly owner reporting",
+      "Bespoke real estate advisory",
+      "Discreet, relationship-led guidance",
+      "Solutions aligned with client aspirations",
     ],
-  },
-  {
-    id: "s4",
-    slug: "investment-advisory",
-    number: "04",
-    title: "Investment & Advisory",
-    summary:
-      "Yield-led guidance for private investors, family offices and institutional buyers entering Qatar.",
-    description:
-      "We model net yield after service charge, assess exit liquidity by building and community, and advise on freehold eligibility and residency thresholds so capital is committed with a clear view of both return and regulation.",
     image: img.propOffice,
-    points: [
-      "Net yield and cash-flow modelling",
-      "Freehold and leasehold eligibility guidance",
-      "Portfolio acquisition and disposal strategy",
-      "Off-market and pre-launch access",
-    ],
   },
 ];

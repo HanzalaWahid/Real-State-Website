@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "motion/react";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 
 import { PageHero } from "@/components/common/PageHero";
 import { InquiryForm } from "@/components/common/InquiryForm";
@@ -11,13 +11,13 @@ import { img } from "@/data/images";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Al Noor Property Consultants | West Bay, Doha" },
+      { title: "Contact Rifa Real Estate WLL | Lusail, Qatar" },
       {
         name: "description",
         content:
-          "Speak with a Qatar property specialist. Call, WhatsApp or email our West Bay office, Sunday to Thursday, 8:30 to 18:00.",
+          "Contact Rifa Real Estate WLL in Lusail, Qatar, for luxury residential and commercial property sales, leasing and advisory.",
       },
-      { property: "og:title", content: "Contact Al Noor Property Consultants | West Bay, Doha" },
+      { property: "og:title", content: "Contact Rifa Real Estate WLL | Lusail, Qatar" },
       {
         property: "og:description",
         content: "Arrange a viewing or ask for advice on buying, renting or investing in Qatar.",
@@ -38,7 +38,6 @@ function ContactPage() {
     },
     { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
     { icon: MapPin, label: "Office", value: site.address },
-    { icon: Clock, label: "Hours", value: site.hours },
   ];
 
   return (
@@ -56,7 +55,7 @@ function ContactPage() {
         <div className="container-page grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-20">
           <motion.div variants={staggerContainer} {...revealProps}>
             <motion.h2 variants={fadeUp} className="display-card">
-              Al Noor Property Consultants
+              {site.fullName}
             </motion.h2>
             <motion.dl variants={staggerContainer} className="mt-10 space-y-8">
               {details.map((d) => (

@@ -45,11 +45,11 @@ export const Route = createFileRoute("/properties/$propertyId")({
   head: ({ loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Property unavailable | Al Noor" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Property unavailable | Rifa Real Estate WLL" }, { name: "robots", content: "noindex" }],
       };
     }
     const { property } = loaderData;
-    const title = `${property.title}, ${property.location} | Al Noor`;
+    const title = `${property.title}, ${property.location} | Rifa Real Estate WLL`;
     const description = property.description.slice(0, 155);
     return {
       meta: [

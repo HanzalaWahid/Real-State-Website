@@ -119,7 +119,6 @@ export function Footer() {
                   {site.email}
                 </a>
               </p>
-              <p className="text-primary-foreground/45">{site.hours}</p>
             </address>
 
             <form

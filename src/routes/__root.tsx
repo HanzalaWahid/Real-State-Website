@@ -81,14 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Al Noor Property Consultants — Qatar Real Estate" },
+      { title: "Rifa Real Estate WLL — Qatar Real Estate" },
       {
         name: "description",
         content:
           "Premium residential, commercial and investment property across Doha, Lusail and The Pearl Qatar.",
       },
-      { name: "author", content: "Al Noor Property Consultants" },
-      { property: "og:site_name", content: "Al Noor Property Consultants" },
+      { name: "author", content: "Rifa Real Estate WLL" },
+      { property: "og:site_name", content: "Rifa Real Estate WLL" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

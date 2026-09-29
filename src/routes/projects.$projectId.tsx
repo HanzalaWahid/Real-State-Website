@@ -25,13 +25,13 @@ export const Route = createFileRoute("/projects/$projectId")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Development unavailable | Al Noor" },
+          { title: "Development unavailable | Rifa Real Estate WLL" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
     const { project } = loaderData;
-    const title = `${project.title}, ${project.location} | Al Noor`;
+    const title = `${project.title}, ${project.location} | Rifa Real Estate WLL`;
     return {
       meta: [
         { title },

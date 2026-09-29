@@ -15,13 +15,13 @@ export const Route = createFileRoute("/about")({
   loader: async () => ({ testimonials: await getTestimonials() }),
   head: () => ({
     meta: [
-      { title: "About Al Noor Property Consultants | Doha, Qatar" },
+      { title: "About Rifa Real Estate WLL | Lusail, Qatar" },
       {
         name: "description",
         content:
-          "A Doha property consultancy working West Bay, Lusail, The Pearl and Msheireb since 2014, with consultants assigned to each community.",
+          "Rifa Real Estate WLL offers luxury residential and commercial sales and leasing, exclusive property marketing and bespoke real estate advisory in Qatar.",
       },
-      { property: "og:title", content: "About Al Noor Property Consultants | Doha, Qatar" },
+      { property: "og:title", content: "About Rifa Real Estate WLL | Lusail, Qatar" },
       {
         property: "og:description",
         content: "Who we are, how we work, and the people you will deal with.",
@@ -38,10 +38,10 @@ function AboutPage() {
     <>
       <PageHero
         eyebrow="About"
-        title="A consultancy built around Doha's communities"
-        intro="Since 2014 we have advised residents, investors and occupiers across Qatar — one consultant per community, accountable for what they recommend."
+        title="Beyond property. Above expectations."
+        intro="Rifa Real Estate Brokerage represents a distinguished standard of real estate in Qatar, delivering an elevated experience defined by sophistication, discretion and tailored service."
         image={img.aboutTeam}
-        imageAlt="The Al Noor team in their West Bay office"
+        imageAlt="Luxury real estate in Qatar"
         crumbs={[{ label: "Home", to: "/" }, { label: "About" }]}
       />
 

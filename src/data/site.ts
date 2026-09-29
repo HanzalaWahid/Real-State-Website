@@ -1,13 +1,12 @@
 export const site = {
-  name: "Al Noor",
-  fullName: "Al Noor Property Consultants",
-  tagline: "Qatar Real Estate",
-  phone: "+974 4412 8800",
-  whatsapp: "+974 5512 8800",
-  email: "enquiries@alnoor.qa",
-  address: "Tower 2, Level 24, Al Fardan Office Tower, West Bay, Doha, Qatar",
-  hours: "Sunday – Thursday, 8:30 – 18:00",
-  licence: "Qatar Real Estate Regulatory Authority Licence No. 4482",
+  name: "RIFA",
+  fullName: "Rifa Real Estate WLL",
+  tagline: "Beyond property. Above expectations.",
+  phone: "+974 5119 9139",
+  whatsapp: "+974 5119 9139",
+  email: "Info@rifarealestate.com",
+  address: "The Eighteen Tower, Marina, Lusail, Qatar",
+  licence: "MOJ License No. 963",
 };
 
 export const stats = [
@@ -87,24 +86,24 @@ export const processSteps = [
 
 export const values = [
   {
-    title: "Local depth",
+    title: "Sophistication",
     description:
-      "Every consultant is assigned to a defined set of Doha communities and knows its buildings, landlords and price history.",
-  },
-  {
-    title: "Honest guidance",
-    description:
-      "We tell clients when a property is wrong for them. Long relationships matter more than a single transaction.",
-  },
-  {
-    title: "Documented process",
-    description:
-      "Title, ownership eligibility, service charges and handover terms are confirmed in writing before you commit.",
+      "We deliver an elevated real estate experience with care at every stage.",
   },
   {
     title: "Discretion",
     description:
-      "Off-market instructions and private client requirements are handled without public listing exposure.",
+      "We handle client relationships and property representation with discretion.",
+  },
+  {
+    title: "Attention to detail",
+    description:
+      "We bring meticulous attention to detail to each property and client brief.",
+  },
+  {
+    title: "Tailored service",
+    description:
+      "Our real estate solutions are shaped around the aspirations of each client.",
   },
 ];
 
