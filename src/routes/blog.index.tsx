@@ -18,13 +18,13 @@ export const Route = createFileRoute("/blog/")({
   loader: async ({ deps }) => ({ posts: await getBlogPosts(deps.category) }),
   head: () => ({
     meta: [
-      { title: "Qatar Property Insights & Market Guides | Rifa Real Estate WLL" },
+      { title: "Qatar Property Insights & Market Guides | RIFA Property Consultant" },
       {
         name: "description",
         content:
           "Market outlooks, buying guides and community profiles for Doha, Lusail, The Pearl Qatar and Msheireb.",
       },
-      { property: "og:title", content: "Qatar Property Insights & Market Guides | Rifa Real Estate WLL" },
+      { property: "og:title", content: "Qatar Property Insights & Market Guides | RIFA Property Consultant" },
       {
         property: "og:description",
         content: "Practical reading on buying, renting and investing in Qatar property.",

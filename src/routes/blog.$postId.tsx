@@ -21,13 +21,13 @@ export const Route = createFileRoute("/blog/$postId")({
   head: ({ loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Article unavailable | Rifa Real Estate WLL" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Article unavailable | RIFA Property Consultant" }, { name: "robots", content: "noindex" }],
       };
     }
     const { post } = loaderData;
     return {
       meta: [
-        { title: `${post.title} | Rifa Real Estate WLL Insights` },
+        { title: `${post.title} | RIFA Property Consultant Insights` },
         { name: "description", content: post.excerpt },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },

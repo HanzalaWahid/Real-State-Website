@@ -24,13 +24,13 @@ export const Route = createFileRoute("/properties/")({
   loader: async ({ deps }) => ({ results: await getProperties(searchToFilters(deps)) }),
   head: () => ({
     meta: [
-      { title: "Properties for Sale & Rent in Qatar | Rifa Real Estate WLL" },
+      { title: "Properties for Sale & Rent in Qatar | RIFA Property Consultant" },
       {
         name: "description",
         content:
           "Search apartments, villas, townhouses, offices and warehouses for sale and rent across Doha, Lusail, The Pearl and Msheireb.",
       },
-      { property: "og:title", content: "Properties for Sale & Rent in Qatar | Rifa Real Estate WLL" },
+      { property: "og:title", content: "Properties for Sale & Rent in Qatar | RIFA Property Consultant" },
       {
         property: "og:description",
         content: "Filter Qatar property by location, type, price, bedrooms and amenities.",

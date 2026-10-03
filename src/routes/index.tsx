@@ -37,13 +37,13 @@ export const Route = createFileRoute("/")({
   },
   head: () => ({
     meta: [
-      { title: "Rifa Real Estate WLL — Premium Qatar Real Estate" },
+      { title: "RIFA Property Consultant — Premium Qatar Real Estate" },
       {
         name: "description",
         content:
           "Find apartments, villas, offices and new developments across Doha, Lusail and The Pearl Qatar, advised by specialists who work these communities daily.",
       },
-      { property: "og:title", content: "Rifa Real Estate WLL — Premium Qatar Real Estate" },
+      { property: "og:title", content: "RIFA Property Consultant — Premium Qatar Real Estate" },
       {
         property: "og:description",
         content:

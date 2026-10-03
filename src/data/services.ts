@@ -10,7 +10,7 @@ export const services: Service[] = [
     summary:
       "Residential and commercial real estate sales and leasing, tailored to each client's requirements.",
     description:
-      "RIFA Real Estate WLL represents luxury residential and commercial properties in Qatar, pairing clients with opportunities suited to their goals and requirements.",
+      "RIFA Property Consultant represents luxury residential and commercial properties in Qatar, pairing clients with opportunities suited to their goals and requirements.",
     image: img.propApartment,
     points: [
       "Luxury residential property sales and leasing",

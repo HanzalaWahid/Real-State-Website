@@ -11,13 +11,13 @@ import { img } from "@/data/images";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Rifa Real Estate WLL | Lusail, Qatar" },
+      { title: "Contact RIFA Property Consultant | Lusail, Qatar" },
       {
         name: "description",
         content:
-          "Contact Rifa Real Estate WLL in Lusail, Qatar, for luxury residential and commercial property sales, leasing and advisory.",
+          "Contact RIFA Property Consultant in Lusail, Qatar, for luxury residential and commercial property sales, leasing and advisory.",
       },
-      { property: "og:title", content: "Contact Rifa Real Estate WLL | Lusail, Qatar" },
+      { property: "og:title", content: "Contact RIFA Property Consultant | Lusail, Qatar" },
       {
         property: "og:description",
         content: "Arrange a viewing or ask for advice on buying, renting or investing in Qatar.",

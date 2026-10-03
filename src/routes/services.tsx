@@ -12,16 +12,16 @@ export const Route = createFileRoute("/services")({
   loader: async () => ({ services: await getServices() }),
   head: () => ({
     meta: [
-      { title: "Real Estate Services | Rifa Real Estate WLL" },
+      { title: "Real Estate Services | RIFA Property Consultant" },
       {
         name: "description",
         content:
           "Luxury residential and commercial sales and leasing, exclusive property marketing and representation, and bespoke real estate advisory in Qatar.",
       },
-      { property: "og:title", content: "Real Estate Services | Rifa Real Estate WLL" },
+      { property: "og:title", content: "Real Estate Services | RIFA Property Consultant" },
       {
         property: "og:description",
-        content: "Tailored real estate services in Qatar from Rifa Real Estate WLL.",
+        content: "Tailored real estate services in Qatar from RIFA Property Consultant.",
       },
     ],
   }),

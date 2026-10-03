@@ -1,6 +1,6 @@
 export const site = {
   name: "RIFA",
-  fullName: "Rifa Real Estate WLL",
+  fullName: "RIFA Property Consultant",
   tagline: "Beyond property. Above expectations.",
   phone: "+974 5119 9139",
   whatsapp: "+974 5119 9139",

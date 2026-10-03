@@ -1,14 +1,14 @@
-# Al Noor Property Consultants
+# RIFA Property Consultant
 
-A real estate website for residential, commercial, and investment properties across Doha, Lusail, and The Pearl Qatar.
+Property search, residential and commercial listings, new developments, and real estate advisory across Doha, Lusail, and The Pearl Qatar.
 
 ## Development
 
 You need Node.js and npm to run the project locally.
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
 ```
+
+Create a production build with `npm run build` and run ESLint with `npm run lint`.

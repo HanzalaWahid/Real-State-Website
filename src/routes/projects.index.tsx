@@ -12,13 +12,13 @@ export const Route = createFileRoute("/projects/")({
   loader: async () => ({ projects: await getProjects() }),
   head: () => ({
     meta: [
-      { title: "New Developments in Qatar | Rifa Real Estate WLL" },
+      { title: "New Developments in Qatar | RIFA Property Consultant" },
       {
         name: "description",
         content:
           "Off-plan and completed developments across Lusail, The Pearl Qatar, West Bay and Msheireb, with handover dates and starting prices.",
       },
-      { property: "og:title", content: "New Developments in Qatar | Rifa Real Estate WLL" },
+      { property: "og:title", content: "New Developments in Qatar | RIFA Property Consultant" },
       {
         property: "og:description",
         content: "Developments we represent across Doha, from launch to handover.",

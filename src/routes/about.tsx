@@ -15,13 +15,13 @@ export const Route = createFileRoute("/about")({
   loader: async () => ({ testimonials: await getTestimonials() }),
   head: () => ({
     meta: [
-      { title: "About Rifa Real Estate WLL | Lusail, Qatar" },
+      { title: "About RIFA Property Consultant | Lusail, Qatar" },
       {
         name: "description",
         content:
-          "Rifa Real Estate WLL offers luxury residential and commercial sales and leasing, exclusive property marketing and bespoke real estate advisory in Qatar.",
+          "RIFA Property Consultant offers luxury residential and commercial sales and leasing, exclusive property marketing and bespoke real estate advisory in Qatar.",
       },
-      { property: "og:title", content: "About Rifa Real Estate WLL | Lusail, Qatar" },
+      { property: "og:title", content: "About RIFA Property Consultant | Lusail, Qatar" },
       {
         property: "og:description",
         content: "Who we are, how we work, and the people you will deal with.",
@@ -39,7 +39,7 @@ function AboutPage() {
       <PageHero
         eyebrow="About"
         title="Beyond property. Above expectations."
-        intro="Rifa Real Estate Brokerage represents a distinguished standard of real estate in Qatar, delivering an elevated experience defined by sophistication, discretion and tailored service."
+        intro="RIFA Property Consultant represents a distinguished standard of real estate in Qatar, delivering an elevated experience defined by sophistication, discretion and tailored service."
         image={img.aboutTeam}
         imageAlt="Luxury real estate in Qatar"
         crumbs={[{ label: "Home", to: "/" }, { label: "About" }]}
