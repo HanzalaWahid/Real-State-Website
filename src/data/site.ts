@@ -9,13 +9,6 @@ export const site = {
   licence: "MOJ License No. 963",
 };
 
-export const stats = [
-  { id: "listings", value: 540, suffix: "+", label: "Properties under management" },
-  { id: "projects", value: 36, suffix: "+", label: "Developments represented" },
-  { id: "years", value: 12, suffix: "+", label: "Years in the Qatar market" },
-  { id: "clients", value: 2500, suffix: "+", label: "Clients advised since 2014" },
-];
-
 export const locations = [
   "Doha",
   "West Bay",

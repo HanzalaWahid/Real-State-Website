@@ -3,11 +3,10 @@ import { motion } from "motion/react";
 
 import { PageHero } from "@/components/common/PageHero";
 import { SectionHeading } from "@/components/common/SectionHeading";
-import { AnimatedCounter } from "@/components/common/AnimatedCounter";
 import { CTASection } from "@/components/common/CTASection";
 import { TestimonialCarousel } from "@/components/common/TestimonialCarousel";
 import { getTestimonials } from "@/data/repository";
-import { stats, values } from "@/data/site";
+import { values } from "@/data/site";
 import { fadeUp, revealProps, staggerContainer } from "@/utils/motion";
 import { img } from "@/data/images";
 
@@ -44,16 +43,6 @@ function AboutPage() {
         imageAlt="Luxury real estate in Qatar"
         crumbs={[{ label: "Home", to: "/" }, { label: "About" }]}
       />
-
-      <section className="bg-ink">
-        <div className="container-page section-y">
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((s) => (
-              <AnimatedCounter key={s.id} value={s.value} suffix={s.suffix} label={s.label} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="section-y">
         <div className="container-page">

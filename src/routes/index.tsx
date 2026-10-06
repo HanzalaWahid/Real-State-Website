@@ -9,11 +9,10 @@ import { CategoryCard } from "@/components/common/CategoryCard";
 import { BlogCard } from "@/components/common/BlogCard";
 import { ProjectCarousel } from "@/components/common/ProjectCarousel";
 import { TestimonialCarousel } from "@/components/common/TestimonialCarousel";
-import { AnimatedCounter } from "@/components/common/AnimatedCounter";
 import { CTASection } from "@/components/common/CTASection";
 import { ActionLink } from "@/components/common/Action";
 import { fadeUp, imageReveal, revealProps, staggerContainer } from "@/utils/motion";
-import { popularSearches, processSteps, stats } from "@/data/site";
+import { popularSearches, processSteps } from "@/data/site";
 import {
   getBlogPosts,
   getCategories,
@@ -201,22 +200,6 @@ function HomePage() {
               </motion.li>
             ))}
           </motion.ol>
-        </div>
-      </section>
-
-      {/* Market statistics */}
-      <section className="bg-ink">
-        <div className="container-page section-y">
-          <SectionHeading
-            eyebrow="The practice"
-            title="Twelve years inside the Qatar market"
-            tone="inverse"
-          />
-          <div className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((s) => (
-              <AnimatedCounter key={s.id} value={s.value} suffix={s.suffix} label={s.label} />
-            ))}
-          </div>
         </div>
       </section>
 
