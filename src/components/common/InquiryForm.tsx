@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "motion/react";
+import { useRouterState } from "@tanstack/react-router";
 import { ActionButton } from "./Action";
 import { cn } from "@/lib/utils";
 
@@ -12,6 +13,7 @@ const schema = z.object({
   phone: z.string().min(7, "Please enter a contactable phone number."),
   date: z.string().optional(),
   message: z.string().min(10, "Tell us a little about what you are looking for."),
+  botcheck: z.string().optional(),
 });
 
 type Values = z.infer<typeof schema>;
@@ -19,14 +21,10 @@ type Values = z.infer<typeof schema>;
 const inputClass =
   "h-12 w-full border border-border bg-background px-4 text-sm outline-none transition-colors focus:border-foreground";
 
-export function InquiryForm({
-  context,
-  compact = false,
-}: {
-  context?: string;
-  compact?: boolean;
-}) {
+export function InquiryForm({ context, compact = false }: { context?: string; compact?: boolean }) {
   const [sent, setSent] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
   const {
     register,
     handleSubmit,
@@ -46,7 +44,7 @@ export function InquiryForm({
         className="border border-border bg-card p-8 text-center"
       >
         <p className="eyebrow">Enquiry received</p>
-        <h3 className="display-card mt-4">Thank you.</h3>
+        <h3 className="display-card mt-4">Thank you, we’ll be in touch.</h3>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           Our property specialist will contact you shortly — usually within the same working day.
         </p>
@@ -57,12 +55,62 @@ export function InquiryForm({
   return (
     <form
       noValidate
-      onSubmit={handleSubmit(async () => {
-        await new Promise((r) => setTimeout(r, 550));
-        setSent(true);
+      onSubmit={handleSubmit(async (values) => {
+        setSubmitError(null);
+
+        try {
+          const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
+          if (!accessKey) {
+            throw new Error("VITE_WEB3FORMS_KEY is not configured.");
+          }
+
+          const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              access_key: accessKey,
+              subject: "New enquiry from rifarealestate.com",
+              from_name: "RIFA Property Consultant",
+              name: values.name,
+              email: values.email,
+              phone: values.phone,
+              message: values.message,
+              preferred_viewing_date: values.date || "",
+              property_or_page: context ? `${context} (${pathname})` : pathname,
+              botcheck: values.botcheck || "",
+            }),
+          });
+          const result: { success?: boolean; message?: string } = await response.json();
+
+          if (!response.ok || !result.success) {
+            throw new Error(result.message || `Web3Forms request failed (${response.status}).`);
+          }
+
+          setSent(true);
+        } catch (error) {
+          console.error("Unable to send enquiry:", error);
+          setSubmitError(
+            "Sorry, we couldn’t send your enquiry just now. Please try again in a moment.",
+          );
+        }
       })}
       className="space-y-4"
     >
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="inquiry-website">Leave this field empty</label>
+        <input
+          id="inquiry-website"
+          type="text"
+          name="botcheck"
+          tabIndex={-1}
+          autoComplete="off"
+          {...register("botcheck")}
+        />
+      </div>
+
       <div className={cn("grid gap-4", !compact && "sm:grid-cols-2")}>
         <Field label="Name" error={errors.name?.message}>
           <input className={inputClass} placeholder="Full name" {...register("name")} />
@@ -91,6 +139,12 @@ export function InquiryForm({
           {...register("message")}
         />
       </Field>
+
+      {submitError && (
+        <p role="alert" className="text-sm text-destructive">
+          {submitError}
+        </p>
+      )}
 
       <ActionButton type="submit" disabled={isSubmitting} className="w-full">
         {isSubmitting ? "Sending…" : "Submit enquiry"}
