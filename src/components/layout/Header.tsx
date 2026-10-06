@@ -87,10 +87,9 @@ export function Header() {
             overlay ? "h-24" : "h-16 md:h-[4.5rem]",
           )}
         >
-          <Link to="/" className="flex items-baseline gap-2.5" aria-label={site.fullName}>
-            <span className="font-display text-2xl leading-none tracking-tight">{site.name}</span>
-            <span className="hidden text-[0.5625rem] uppercase tracking-[0.3em] opacity-70 sm:inline">
-              Property Consultants
+          <Link to="/" className="flex items-center" aria-label={site.fullName}>
+            <span className="h-14 w-[122px] overflow-hidden sm:h-[4.25rem] sm:w-[150px]">
+              <img src="/rifa-removebg-preview.png" alt="" className="size-full object-cover" />
             </span>
           </Link>
 
@@ -185,7 +184,13 @@ export function Header() {
               className="fixed inset-y-0 right-0 z-50 flex w-[min(24rem,88vw)] flex-col bg-background text-foreground"
             >
               <div className="flex h-16 items-center justify-between border-b border-border px-6">
-                <span className="font-display text-xl">{site.name}</span>
+                <span className="h-14 w-[122px] overflow-hidden">
+                  <img
+                    src="/rifa-removebg-preview.png"
+                    alt={site.fullName}
+                    className="size-full object-cover"
+                  />
+                </span>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
@@ -215,9 +220,7 @@ export function Header() {
                           className="flex size-11 items-center justify-center"
                           aria-label={`Toggle ${item.label} links`}
                           aria-expanded={expanded === item.label}
-                          onClick={() =>
-                            setExpanded(expanded === item.label ? null : item.label)
-                          }
+                          onClick={() => setExpanded(expanded === item.label ? null : item.label)}
                         >
                           <ChevronDown
                             className={cn(

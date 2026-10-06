@@ -48,7 +48,13 @@ export function Footer() {
       <div className="container-page py-16 md:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr_1.2fr]">
           <div>
-            <span className="font-display text-3xl">{site.name}</span>
+            <span className="block h-24 w-[210px] overflow-hidden">
+              <img
+                src="/rifa-removebg-preview.png"
+                alt={site.fullName}
+                className="size-full object-cover"
+              />
+            </span>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-primary-foreground/60">
               A Doha property consultancy advising buyers, tenants, landlords and investors across
               residential and commercial Qatar since 2014.
