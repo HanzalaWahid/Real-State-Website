@@ -57,7 +57,7 @@ export function Footer() {
             </span>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-primary-foreground/60">
               A Doha property consultancy advising buyers, tenants, landlords and investors across
-              residential and commercial Qatar since 2014.
+              residential and commercial Qatar since 2026.
             </p>
             <div className="mt-6 flex gap-3">
               {[Linkedin, Instagram, Facebook].map((Icon, i) => (
