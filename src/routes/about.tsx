@@ -7,7 +7,7 @@ import { AnimatedCounter } from "@/components/common/AnimatedCounter";
 import { CTASection } from "@/components/common/CTASection";
 import { TestimonialCarousel } from "@/components/common/TestimonialCarousel";
 import { getTestimonials } from "@/data/repository";
-import { site, stats, team, values } from "@/data/site";
+import { stats, values } from "@/data/site";
 import { fadeUp, revealProps, staggerContainer } from "@/utils/motion";
 import { img } from "@/data/images";
 
@@ -76,28 +76,6 @@ function AboutPage() {
               </motion.div>
             ))}
           </motion.div>
-        </div>
-      </section>
-
-      <section className="section-y bg-secondary/60">
-        <div className="container-page">
-          <SectionHeading eyebrow="The team" title="People you will actually deal with" />
-          <motion.div
-            variants={staggerContainer}
-            {...revealProps}
-            className="mt-14 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4"
-          >
-            {team.map((member) => (
-              <motion.div key={member.name} variants={fadeUp} className="border-t border-border pt-6">
-                <h3 className="font-display text-xl">{member.name}</h3>
-                <p className="meta-label mt-2 text-accent">{member.role}</p>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{member.bio}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-          <p className="mt-16 max-w-xl text-xs leading-relaxed text-muted-foreground">
-            {site.licence}. Registered office: {site.address}.
-          </p>
         </div>
       </section>
 

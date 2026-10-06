@@ -106,26 +106,3 @@ export const values = [
       "Our real estate solutions are shaped around the aspirations of each client.",
   },
 ];
-
-export const team = [
-  {
-    name: "Noora Al-Mansouri",
-    role: "Managing Director",
-    bio: "Fifteen years across Doha brokerage and development sales. Leads the private client desk.",
-  },
-  {
-    name: "Rashid Al-Kuwari",
-    role: "Head of Investment Advisory",
-    bio: "Advises family offices and institutional buyers on yield-led acquisitions in Lusail and West Bay.",
-  },
-  {
-    name: "Layla Haddad",
-    role: "Head of Residential Leasing",
-    bio: "Manages the corporate leasing portfolio for relocating executives and diplomatic missions.",
-  },
-  {
-    name: "Omar Sheikh",
-    role: "Director of Project Marketing",
-    bio: "Takes new developments from launch strategy through to final unit release.",
-  },
-];
