@@ -91,15 +91,26 @@ function ProjectDetail() {
             transition={{ duration: 0.65, ease: EASE_EDITORIAL, delay: 0.1 }}
             className="mt-8 max-w-3xl"
           >
-            <p className="eyebrow text-accent">{statusLabels[project.status]}</p>
+            {project.status && (
+              <p className="eyebrow text-accent">{statusLabels[project.status]}</p>
+            )}
             <h1 className="display-hero mt-5 text-primary-foreground">{project.title}</h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/70">
               {project.shortDescription}
             </p>
             <dl className="mt-12 grid max-w-2xl grid-cols-2 gap-8 sm:grid-cols-4">
               {[
-                { icon: Coins, label: "From", value: formatPrice(project.startingPrice) },
-                { icon: CalendarClock, label: "Handover", value: project.handover },
+                {
+                  icon: Coins,
+                  label: project.startingPrice !== undefined ? "From" : "Price",
+                  value:
+                    project.startingPrice !== undefined
+                      ? formatPrice(project.startingPrice)
+                      : "On request",
+                },
+                ...(project.handover
+                  ? [{ icon: CalendarClock, label: "Handover", value: project.handover }]
+                  : []),
                 { icon: Building2, label: "Developer", value: project.developer },
                 { icon: Building2, label: "Location", value: project.location },
               ].map((item) => (
@@ -181,6 +192,32 @@ function ProjectDetail() {
           </div>
         </div>
       </section>
+
+      {project.floorPlans && project.floorPlans.length > 0 && (
+        <section className="section-y">
+          <div className="container-page">
+            <SectionHeading eyebrow="Layouts" title="Floor plans" />
+            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {project.floorPlans.map((plan) => (
+                <a
+                  key={plan}
+                  href={plan}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="media-frame block border border-border"
+                >
+                  <img
+                    src={plan}
+                    alt={`${project.title} floor plan`}
+                    loading="lazy"
+                    className="h-80 w-full object-contain"
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {units.length > 0 && (
         <section className="section-y">

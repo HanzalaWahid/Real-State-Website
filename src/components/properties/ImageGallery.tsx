@@ -166,7 +166,7 @@ export function ImageGallery({ images, title }: { images: string[]; title: strin
                     i === index ? "border-accent opacity-100" : "border-transparent opacity-50"
                   }`}
                 >
-                  <img src={src} alt="" className="size-full object-cover" />
+                  <img src={src} alt="" loading="lazy" className="size-full object-cover" />
                 </button>
               ))}
             </div>

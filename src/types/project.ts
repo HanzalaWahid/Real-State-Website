@@ -8,14 +8,15 @@ export interface Project {
   developer: string;
   shortDescription: string;
   description: string;
-  status: ProjectStatus;
-  startingPrice: number;
+  status?: ProjectStatus;
+  startingPrice?: number;
   currency: "QAR";
   heroImage: string;
   gallery: string[];
+  floorPlans?: string[];
   amenities: string[];
   features: string[];
-  handover: string;
+  handover?: string;
   unitTypes: string[];
   availableUnitIds: string[];
   featured: boolean;

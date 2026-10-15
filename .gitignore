@@ -31,3 +31,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Original property brochures (keep locally, don't push to GitHub)
+reference_pdf/
